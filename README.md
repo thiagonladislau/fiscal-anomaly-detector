@@ -8,11 +8,11 @@ Reduce the time spent on manual conferences by using Machine Learning to detect 
 
 ## Roadmap
 - [x] Initial setup
-- [ ] Data simulation and exploration (Chapter 2 - Hands-On ML)
-- [ ] Data cleaning and pipeline creation
+- [x] Data simulation and exploration (Chapter 2 - Hands-On ML)
+- [x] Data cleaning and pipeline creation
 - [ ] Model training for anomaly detection
 
-## Practical Example (Anomaly Detection)
+## Practical Example (Anomaly Detection)s
 
 The system identifies fiscal inconsistencies by calculating the **Real Rate** of each invoice and comparing it against a business rule threshold (12%).
 
