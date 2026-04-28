@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #Carregando os dados que geraamos no passo anterior
-df = pd.read_csv('fiscal_data.csv')
+df = pd.read_csv('tax_data.csv')
 
 #Visualizar as primeiras 5 linhas para garantir que tudo subiu certo
 print(df.head())

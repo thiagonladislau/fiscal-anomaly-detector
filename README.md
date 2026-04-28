@@ -1,25 +1,33 @@
-# Fiscal Anomaly Detector
+# Tax Anomaly Detector
+
+A practical project focused on identifying tax inconsistencies using Machine Learning. This project was developed as a hands-on study of the concepts presented in the book **"Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"** by **Aurélien Géron**.
 
 ## Project Overview
-This project aims to optimize the fiscal closing process by identifying potential inconsistencies in tax documents (ICMS, Sped, Reinf) before the final audit.
+This tool simulates a corporate tax environment where invoices are issued with a standard 12% tax rate. By implementing a Linear Regression model, the system can "learn" the tax pattern and identify records that deviate from the rule (anomalies), simulating errors or system glitches.
 
-## Objective
-Reduce the time spent on manual conferences by using Machine Learning to detect anomalies in fiscal data patterns.
+## Technical Results
+After training the model using the `tax_data.csv` dataset, the following results were achieved:
+
+- **Model Coefficient:** 0.1229 (The AI successfully identified the ~12% tax pattern).
+- **RMSE (Root Mean Squared Error):** 6.09 (The model has an average error of only 6.09 units per invoice).
+
+## Practical Example (Case Study)
+The system identified **Invoice ID 956** as a critical anomaly:
+- **Invoice Value:** 14,587.22
+- **Actual Tax Found:** 2,625.70 (18% rate)
+- **Expected Tax (AI Prediction):** ~1,750.46 (12% rate)
+
+**Result:** The discrepancy was flagged automatically, saving time and avoiding potential fiscal penalties.
 
 ## Roadmap
-- [x] Initial setup
+- [x] Initial setup and Git repository
 - [x] Data simulation and exploration (Chapter 2 - Hands-On ML)
 - [x] Data cleaning and pipeline creation
-- [ ] Model training for anomaly detection
+- [x] Model training for anomaly detection (Linear Regression)
+- [ ] Model deployment/automation
 
-## Practical Example (Anomaly Detection)s
-
-The system identifies fiscal inconsistencies by calculating the **Real Rate** of each invoice and comparing it against a business rule threshold (12%).
-
-**Case Study: Invoice ID 956**
-- **Vendor:** Supplier Enterprise 10 Ltd
-- **Invoice Value:** R$ 14.587,22
-- **Expected Tax (12%):** R$ 1.750,46
-- **Actual Tax Found:** **R$ 2.625,70** (An 18% rate)
-
-**Result:** The algorithm flagged this record as an anomaly because the 18% rate exceeded our 13% safety threshold. This record was automatically moved to the `audit_report_needed.csv` for immediate human review.
+## Technologies Used
+- **Python 3.12**
+- **Pandas** (Data manipulation)
+- **Scikit-Learn** (Machine Learning)
+- **Matplotlib/Seaborn** (Data Visualization)

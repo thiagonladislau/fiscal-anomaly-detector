@@ -36,9 +36,9 @@ anomalous_indices = np.random.choice(df.index, size=50, replace=False)
 df.loc[anomalous_indices, 'calculated_icms'] = df['calculated_icms'] * 1.5
 
 # 5. Save to CSV
-df.to_csv('fiscal_data.csv', index=False)
+df.to_csv('tax_data.csv', index=False)
 
-print("✅ Success! 'fiscal_data.csv' updated with CNPJ, Vendor Names, and Dates.")
+print("✅ Success! 'tax_data.csv' updated with CNPJ, Vendor Names, and Dates.")
 
 # --- RESUMO (PORTUGUÊS) ---
 # Adicionamos colunas reais: CNPJ, Razão Social e Data de Emissão.
